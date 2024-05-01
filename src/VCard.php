@@ -42,7 +42,7 @@ class VCard
      *
      * @var array
      */
-    private $multiplePropertiesForElementAllowed = [
+    protected $multiplePropertiesForElementAllowed = [
         'email',
         'address',
         'phoneNumber',
@@ -964,7 +964,7 @@ class VCard
      * @param  string $value
      * @throws VCardException
      */
-    private function setProperty($element, $key, $value)
+    protected function setProperty($element, $key, $value)
     {
         if (!in_array($element, $this->multiplePropertiesForElementAllowed)
             && isset($this->definedElements[$element])
